@@ -12,7 +12,6 @@ declare module 'glob:./sources/{*.ts,**/index.ts}' {
   export const dongqiudi: typeof import('./sources/dongqiudi')
   export const douban: typeof import('./sources/douban')
   export const douyin: typeof import('./sources/douyin')
-  export const fastbull: typeof import('./sources/fastbull')
   export const freebuf: typeof import('./sources/freebuf')
   export const gelonghui: typeof import('./sources/gelonghui')
   export const ghxi: typeof import('./sources/ghxi')
@@ -45,6 +44,5 @@ declare module 'glob:./sources/{*.ts,**/index.ts}' {
   export const wallstreetcn: typeof import('./sources/wallstreetcn')
   export const weibo: typeof import('./sources/weibo')
   export const xueqiu: typeof import('./sources/xueqiu')
-  export const zaobao: typeof import('./sources/zaobao')
   export const zhihu: typeof import('./sources/zhihu')
 }

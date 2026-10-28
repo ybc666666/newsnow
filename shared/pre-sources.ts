@@ -40,15 +40,6 @@ export const originSources = {
     interval: Time.Realtime,
     home: "https://weibo.com",
   },
-  "zaobao": {
-    name: "联合早报",
-    interval: Time.Common,
-    type: "realtime",
-    column: "world",
-    color: "red",
-    desc: "来自第三方网站: 早晨报",
-    home: "https://www.zaobao.com",
-  },
   "coolapk": {
     name: "酷安",
     type: "hottest",
@@ -243,23 +234,6 @@ export const originSources = {
     type: "realtime",
     interval: Time.Realtime,
     home: "https://www.gelonghui.com",
-  },
-  "fastbull": {
-    name: "法布财经",
-    color: "emerald",
-    home: "https://www.fastbull.cn",
-    column: "finance",
-    sub: {
-      express: {
-        title: "快讯",
-        type: "realtime",
-        interval: Time.Realtime,
-      },
-      news: {
-        title: "头条",
-        interval: Time.Common,
-      },
-    },
   },
   "solidot": {
     name: "Solidot",
