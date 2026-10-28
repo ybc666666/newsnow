@@ -13,7 +13,7 @@ export class Cache {
     await this.db.prepare(`
       CREATE TABLE IF NOT EXISTS cache (
         id TEXT PRIMARY KEY,
-        updated INTEGER,
+        updated BIGINT,
         data TEXT
       );
     `).run()
@@ -23,7 +23,8 @@ export class Cache {
   async set(key: string, value: NewsItem[]) {
     const now = Date.now()
     await this.db.prepare(
-      `INSERT OR REPLACE INTO cache (id, data, updated) VALUES (?, ?, ?)`,
+      `INSERT INTO cache (id, data, updated) VALUES (?, ?, ?)
+       ON CONFLICT (id) DO UPDATE SET data = EXCLUDED.data, updated = EXCLUDED.updated`,
     ).run(key, JSON.stringify(value), now)
     logger.success(`set ${key} cache`)
   }
@@ -34,7 +35,7 @@ export class Cache {
       logger.success(`get ${key} cache`)
       return {
         id: row.id,
-        updated: row.updated,
+        updated: Number(row.updated),
         items: JSON.parse(row.data),
       }
     }
@@ -58,7 +59,7 @@ export class Cache {
       logger.success(`get entire (...) cache`)
       return rows.map(row => ({
         id: row.id,
-        updated: row.updated,
+        updated: Number(row.updated),
         items: JSON.parse(row.data) as NewsItem[],
       }))
     } else {

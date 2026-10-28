@@ -3,15 +3,11 @@ services:
     build: .
     ports:
       - '4444:4444'
-    volumes:
-      - newsnow_data:/usr/app/.data
     environment:
+      - TZ=Asia/Shanghai
+      - DATABASE_URL=
       - G_CLIENT_ID=
       - G_CLIENT_SECRET=
       - JWT_SECRET=
       - INIT_TABLE=true
       - ENABLE_CACHE=true
-
-volumes:
-  newsnow_data:
-    name: newsnow_data
