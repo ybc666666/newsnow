@@ -11,3 +11,4 @@ services:
       - JWT_SECRET=
       - INIT_TABLE=true
       - ENABLE_CACHE=true
+      - HISTORY_RETENTION_DAYS=10

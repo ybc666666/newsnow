@@ -71,6 +71,7 @@ export function Header() {
       <span className="justify-self-end flex gap-2 items-center text-xl text-primary-600 dark:text-primary">
         <GoTop />
         <Refresh />
+        <Link to="/history" title="历史热点" className={$("i-ph:calendar-duotone btn")} />
         <Github />
         <Menu />
       </span>

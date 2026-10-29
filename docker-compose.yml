@@ -16,3 +16,4 @@ services:
       - INIT_TABLE=true
       - ENABLE_CACHE=true
       - PRODUCTHUNT_API_TOKEN=
+      - HISTORY_RETENTION_DAYS=10
