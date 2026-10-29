@@ -19,7 +19,7 @@ export default defineTask({
       return { result: "no database" }
     }
     await historyTable.cleanupSnapshot(beforeDay)
-    logger.success(`history-cleanup done: hot_snapshot before ${beforeDay} removed`)
-    return { result: { beforeDay, retentionDays } }
+    logger.success(`history-cleanup done: hot_snapshot before ${beforeDay} removed (retention ${retentionDays}d)`)
+    return { result: `hot_snapshot before ${beforeDay} removed` }
   },
 })

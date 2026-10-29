@@ -13,17 +13,6 @@ const Time = {
 }
 
 export const originSources = {
-  "v2ex": {
-    name: "V2EX",
-    color: "slate",
-    home: "https://v2ex.com/",
-    sub: {
-      share: {
-        title: "最新分享",
-        column: "tech",
-      },
-    },
-  },
   "zhihu": {
     name: "知乎",
     type: "hottest",
@@ -436,15 +425,6 @@ export const originSources = {
       },
     },
   },
-  "freebuf": {
-    name: "Freebuf",
-    column: "china",
-    title: "网络安全",
-    color: "green",
-    type: "hottest",
-    home: "https://www.freebuf.com/",
-  },
-
   "qqvideo": {
     name: "腾讯视频",
     column: "china",

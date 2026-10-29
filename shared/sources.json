@@ -1,21 +1,4 @@
 {
-  "v2ex": {
-    "redirect": "v2ex-share",
-    "name": "V2EX",
-    "column": "tech",
-    "home": "https://v2ex.com/",
-    "color": "slate",
-    "interval": 600000,
-    "title": "最新分享"
-  },
-  "v2ex-share": {
-    "name": "V2EX",
-    "column": "tech",
-    "home": "https://v2ex.com/",
-    "color": "slate",
-    "interval": 600000,
-    "title": "最新分享"
-  },
   "zhihu": {
     "name": "知乎",
     "type": "hottest",
@@ -500,15 +483,6 @@
     "color": "blue",
     "interval": 1800000,
     "title": "综合早报"
-  },
-  "freebuf": {
-    "title": "网络安全",
-    "name": "Freebuf",
-    "type": "hottest",
-    "column": "china",
-    "home": "https://www.freebuf.com/",
-    "color": "green",
-    "interval": 600000
   },
   "qqvideo": {
     "redirect": "qqvideo-tv-hotsearch",
