@@ -3,12 +3,9 @@ services:
     build: .
     ports:
       - '4444:4444'
+    # 运行期环境变量统一从 .env.server 注入；该文件已被 .gitignore 与 .dockerignore 排除，不进 git 也不进镜像
+    env_file:
+      - .env.server
     environment:
+      # 定时采集与历史归属日依赖容器本地时区，必须保持 Asia/Shanghai
       - TZ=Asia/Shanghai
-      - DATABASE_URL=
-      - G_CLIENT_ID=
-      - G_CLIENT_SECRET=
-      - JWT_SECRET=
-      - INIT_TABLE=true
-      - ENABLE_CACHE=true
-      - HISTORY_RETENTION_DAYS=10

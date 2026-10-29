@@ -22,18 +22,14 @@ const nitroOption: Parameters<typeof viteNitro>[0] = {
   },
   database: {
     default: {
+      // 连接参数由 pg 在运行时从环境变量读取：PGHOST / PGPORT / PGUSER / PGPASSWORD / PGDATABASE。
+      // 不要在这里读 process.env.DATABASE_URL：nitro 配置在构建期被固化进产物，取不到值会被序列化成 {}，运行时再设也没用。
       connector: "postgresql",
-      options: {
-        url: process.env.DATABASE_URL,
-      },
     },
   },
   devDatabase: {
     default: {
       connector: "postgresql",
-      options: {
-        url: process.env.DATABASE_URL,
-      },
     },
   },
   imports: {
